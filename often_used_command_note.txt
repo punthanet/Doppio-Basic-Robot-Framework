@@ -1,0 +1,63 @@
+- Open Browser ---->  open browser 
+Ex. 	Open Browser		https://automationexercise.com		browser=chrome
+...     options=add_experimental_option("detach", True)	      # ทำให้โปรแกรมไม่ปิดเองหลังจากทดสอบเสร็จแล้ว ทั้ง Google Chrome และ Microsoft Edge
+
+__________________________________________________________________________________________________________________________________________
+
+- Skip Google Ads ----> Skip google ads (You may put this into *** Keywords *** section)
+
+*** Keywords ***
+Skip Google Ads
+    Execute Javascript    const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()
+
+__________________________________________________________________________________________________________________________________________
+
+- Log To Console ----> Show word or message via console
+Ex. 	Log To Console		ThisIsSayHelloKeywords
+
+__________________________________________________________________________________________________________________________________________
+
+- Input Text ----> For Input text into textbox use with <input> 
+Ex. 	input text		xpath=//input[@data-qa='signup-name']		Testname
+
+__________________________________________________________________________________________________________________________________________
+
+- Click Element ----> Click everything such as Radio button, button ... <div> <button> <input> , whatever
+Ex.	 Click element		xpath=//button[@data-qa="signup-button"]
+Ex.	 Click element		id=id_gender1     # Click Radio button
+
+__________________________________________________________________________________________________________________________________________
+
+- Select From List By Label ----> select value from dropdown list  <select>
+Ex.	 Select From List By Value	id=days		7
+Ex.	 Select From List By Value	id=months	9
+Ex.	 Select From List By Value	id=years	2001
+
+__________________________________________________________________________________________________________________________________________
+
+- Select Checkbox ----> Select Checkbox
+Ex. 	Select Checkbox			id=newsletter
+Ex. 	Select Checkbox			id=optin
+
+__________________________________________________________________________________________________________________________________________
+
+- Element Should Be Visible ----> Verify that Element is visible
+Ex. 	Element Should Be Visible	xpath=//h2[text()='Get In Touch']
+Ex. 	Element Should Be Visible	xpath=//span[contains(text(), 'Rs.')]
+
+__________________________________________________________________________________________________________________________________________
+
+- Choose File ----> Choose file from computer and upload file
+Ex. 	Choose File  	xpath=//input[@name='upload_file']	D:/Automation_Exercise/This is for uploading file.txt  # Upload file	
+
+__________________________________________________________________________________________________________________________________________
+
+- Handle Alert ----> # Pop up เด้งขึ้นแล้วคลิก OK ดูจากที่นี้ https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Handle%20Alert 
+Ex. 	Handle Alert
+
+__________________________________________________________________________________________________________________________________________
+
+- Sleep -----> pause robot for "x" seconds before continue 
+Ex. 	Sleep		10s
+
+__________________________________________________________________________________________________________________________________________
